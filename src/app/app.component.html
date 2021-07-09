@@ -2,11 +2,11 @@
   <div class="main-heading">USER DETAILS</div>
   <div class="wrapper">
     <div cdkDropListGroup class="status-group">
-      <div class="example-container" *ngFor="let user of userData">
+      <div class="status-container" *ngFor="let user of userData">
         <h2>{{user.status}}</h2>
-        <div cdkDropList [cdkDropListData]="user.users" class="example-list" cdkDropListSortingDisabled
+        <div cdkDropList [cdkDropListData]="user.users" class="card-list" cdkDropListSortingDisabled
           (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of user.users" cdkDrag>
+          <div class="card-box" *ngFor="let item of user.users" cdkDrag>
             <div class="name">{{item.name}}</div>
             <div class="number">Mob. No. : {{item.number}}</div>
             <div class="age">Age: {{item.age}}</div>
@@ -17,11 +17,11 @@
       </div>
     </div>
     <div cdkDropListGroup class="status-group">
-      <div class="example-container" *ngFor="let user of userDetails">
+      <div class="status-container" *ngFor="let user of userDetails">
         <h2>{{user.createdDate}}</h2>
-        <div cdkDropList [cdkDropListData]="user.users" class="example-list" cdkDropListSortingDisabled
+        <div cdkDropList [cdkDropListData]="user.users" class="card-list" cdkDropListSortingDisabled
           (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of user.users" cdkDrag>
+          <div class="card-box" *ngFor="let item of user.users" cdkDrag>
             <div class="name">{{item.name}}</div>
             <div class="number">Mob. No. : {{item.number}}</div>
             <div class="age">Age: {{item.age}}</div>
